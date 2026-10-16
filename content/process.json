@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "title": "A clear, low-friction way to work together",
+  "steps": [
+    {
+      "id": "clarify",
+      "number": "01",
+      "title": "Clarify",
+      "description": "Confirm the goal, priority, deadline, tools, access, and what a successful handoff looks like."
+    },
+    {
+      "id": "organize",
+      "number": "02",
+      "title": "Organize",
+      "description": "Break the work into clear steps, gather references, and flag missing information early."
+    },
+    {
+      "id": "execute",
+      "number": "03",
+      "title": "Execute",
+      "description": "Work through the agreed tasks carefully and keep progress visible."
+    },
+    {
+      "id": "review",
+      "number": "04",
+      "title": "Review & hand over",
+      "description": "Check the work, document anything important, and confirm what is complete or needs a decision."
+    }
+  ],
+  "workingPrinciples": []
+}

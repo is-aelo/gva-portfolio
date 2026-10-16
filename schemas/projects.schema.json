@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "items"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "projectType",
+          "status",
+          "summary",
+          "approach"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "projectType": {
+            "enum": [
+              "personal",
+              "concept",
+              "academic",
+              "internship",
+              "freelance",
+              "demo",
+              "client"
+            ]
+          },
+          "status": {
+            "enum": [
+              "draft",
+              "published",
+              "archived"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "approach": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

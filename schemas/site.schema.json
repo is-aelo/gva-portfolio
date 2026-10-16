@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "profile",
+    "navigation",
+    "about",
+    "contact",
+    "seo"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "profile": {
+      "type": "object",
+      "required": [
+        "name",
+        "role",
+        "headline",
+        "summary"
+      ]
+    },
+    "navigation": {
+      "type": "array"
+    },
+    "about": {
+      "type": "object",
+      "required": [
+        "title",
+        "paragraphs"
+      ]
+    },
+    "contact": {
+      "type": "object",
+      "required": [
+        "title",
+        "body"
+      ]
+    },
+    "seo": {
+      "type": "object",
+      "required": [
+        "title",
+        "description"
+      ]
+    }
+  }
+}

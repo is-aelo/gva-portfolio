@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "bini-fan-website",
+      "title": "BINI Fan-Made Website",
+      "category": "web-design-development",
+      "projectType": "personal",
+      "status": "published",
+      "featured": true,
+      "sortOrder": 1,
+      "summary": "A fan-made website concept for the eight-member Filipino pop group BINI, built with Next.js and Sanity CMS.",
+      "context": "Fan sites need a clear way to present group information and discography while keeping content maintainable.",
+      "approach": "Built a responsive web experience and connected content to Sanity CMS. A custom Spotify pipeline script generates a bini_discography.json data file.",
+      "deliverables": [
+        "Responsive fan-made website",
+        "Sanity CMS content structure",
+        "Custom discography data-generation script"
+      ],
+      "tools": [
+        "Next.js",
+        "Sanity CMS",
+        "Spotify API workflow"
+      ],
+      "liveUrl": "https://bini-concept-website.vercel.app/",
+      "repoUrl": "",
+      "coverImage": "",
+      "gallery": [],
+      "altText": "BINI fan-made website concept",
+      "disclaimer": "Unofficial fan-made project; not affiliated with BINI or its management.",
+      "metrics": [],
+      "servicesDemonstrated": [
+        "website-design",
+        "website-development",
+        "cms-content"
+      ]
+    },
+    {
+      "id": "nothing-headless-shopify",
+      "title": "Nothing-Inspired Headless Shopify Concept",
+      "category": "ecommerce",
+      "projectType": "concept",
+      "status": "published",
+      "featured": true,
+      "sortOrder": 2,
+      "summary": "An experimental headless storefront concept using Next.js Commerce and the Shopify Storefront API.",
+      "context": "Explore how a branded storefront can combine a custom frontend with Shopify product and variant data.",
+      "approach": "Implemented dynamic variant orchestration, an automated logic layer, and a sticky add-to-cart interaction.",
+      "deliverables": [
+        "Custom Next.js storefront concept",
+        "Dynamic product-variant behavior",
+        "Sticky add-to-cart interaction"
+      ],
+      "tools": [
+        "Next.js",
+        "Shopify Storefront API",
+        "Vercel"
+      ],
+      "liveUrl": "https://headless-shopify-nothing.vercel.app/",
+      "repoUrl": "",
+      "coverImage": "",
+      "gallery": [],
+      "altText": "Nothing-inspired headless Shopify storefront concept",
+      "disclaimer": "Concept project. Checkout currently redirects to Shopify; do not present it as a fully headless checkout.",
+      "metrics": [],
+      "servicesDemonstrated": [
+        "ecommerce-development",
+        "frontend-development",
+        "shopify-integration"
+      ]
+    },
+    {
+      "id": "nova-echo-redesign",
+      "title": "Nova Echo Website Redesign Concept",
+      "category": "web-design-development",
+      "projectType": "concept",
+      "status": "published",
+      "featured": true,
+      "sortOrder": 3,
+      "summary": "A website redesign concept focused on visual consistency, navigation behavior, and reducing interface clutter.",
+      "context": "The review identified inconsistent CTA gradients and colors, a non-sticky header, and an overloaded card layout.",
+      "approach": "Used the audit findings as a basis for a clearer visual system and more consistent page structure.",
+      "deliverables": [
+        "Website redesign concept",
+        "UI consistency review",
+        "Navigation and content hierarchy improvements"
+      ],
+      "tools": [
+        "Web design",
+        "UI/UX review"
+      ],
+      "liveUrl": "https://novaecho-redesign.vercel.app/",
+      "repoUrl": "",
+      "coverImage": "",
+      "gallery": [],
+      "altText": "Nova Echo website redesign concept",
+      "disclaimer": "Concept redesign; do not claim client engagement or measured conversion results.",
+      "metrics": [],
+      "servicesDemonstrated": [
+        "website-redesign",
+        "ui-ux-design",
+        "frontend-development"
+      ]
+    },
+    {
+      "id": "university-event-management",
+      "title": "University Event Management System",
+      "category": "technical-project",
+      "projectType": "internship",
+      "status": "draft",
+      "featured": false,
+      "sortOrder": 4,
+      "summary": "An event-management system worked on during a web development internship.",
+      "context": "Event workflows require eligibility checks, attendance tracking, and role-aware access.",
+      "approach": "Worked with a Laravel, Filament PHP, and MySQL system that included eligibility validation, QR-based check-ins, and role-based access control.",
+      "deliverables": [
+        "Event management workflows",
+        "Eligibility validation",
+        "QR-based check-in flow",
+        "Role-based access control"
+      ],
+      "tools": [
+        "Laravel",
+        "Filament PHP",
+        "MySQL"
+      ],
+      "liveUrl": "",
+      "repoUrl": "",
+      "coverImage": "",
+      "gallery": [],
+      "altText": "University event management system",
+      "disclaimer": "Internship work. Keep unpublished until scope, screenshots, and permission to display are confirmed.",
+      "metrics": [],
+      "servicesDemonstrated": [
+        "digital-tool-assistance",
+        "website-qa"
+      ]
+    },
+    {
+      "id": "ai-scam-detection-capstone",
+      "title": "AI-Integrated Scam Detection Platform",
+      "category": "technical-project",
+      "projectType": "academic",
+      "status": "draft",
+      "featured": false,
+      "sortOrder": 5,
+      "summary": "An academic capstone project exploring scam detection with external analysis APIs.",
+      "context": "Users need help assessing suspicious messages, links, or signals before acting on them.",
+      "approach": "The project integrated Gemini API and VirusTotal API as part of an AI-assisted scam detection workflow.",
+      "deliverables": [
+        "Academic capstone platform",
+        "API integration workflow"
+      ],
+      "tools": [
+        "Gemini API",
+        "VirusTotal API"
+      ],
+      "liveUrl": "",
+      "repoUrl": "",
+      "coverImage": "",
+      "gallery": [],
+      "altText": "AI-integrated scam detection capstone project",
+      "disclaimer": "Academic project. Do not claim production readiness, detection accuracy, or security guarantees without validated evidence.",
+      "metrics": [],
+      "servicesDemonstrated": [
+        "digital-tool-assistance"
+      ]
+    },
+    {
+      "id": "creative-design-collection",
+      "title": "Selected Graphic Design Work",
+      "category": "creative",
+      "projectType": "freelance",
+      "status": "draft",
+      "featured": false,
+      "sortOrder": 6,
+      "summary": "A curated selection of graphic design work across social content, covers, flyers, infographics, and illustration.",
+      "context": "Different communication needs call for clear hierarchy, visual consistency, and format-aware design.",
+      "approach": "Select representative work, add brief context for each piece, and show the range without implying unmeasured results.",
+      "deliverables": [
+        "Social media graphics",
+        "Podcast covers",
+        "Flyers and magazine covers",
+        "Infographics and vector/vexel artwork"
+      ],
+      "tools": [
+        "Photoshop",
+        "Illustrator",
+        "Canva"
+      ],
+      "liveUrl": "",
+      "repoUrl": "",
+      "coverImage": "",
+      "gallery": [],
+      "altText": "Selected graphic design work",
+      "disclaimer": "Add only work you have permission to display; identify personal or speculative pieces accurately.",
+      "metrics": [],
+      "servicesDemonstrated": [
+        "graphic-design",
+        "presentation-design"
+      ]
+    },
+    {
+      "id": "email-task-management-demo",
+      "title": "Email & Task Management Workflow",
+      "category": "admin-support",
+      "projectType": "demo",
+      "status": "draft",
+      "featured": false,
+      "sortOrder": 7,
+      "summary": "Planned demonstration project showing how an inbox and task list can be triaged using a clear priority system.",
+      "context": "When multiple requests arrive at once, teams need a repeatable way to distinguish urgent work, waiting items, and routine follow-ups.",
+      "approach": "Build a fictional sample inbox, define a priority matrix, organize tasks by urgency and impact, and document the rules used. Use synthetic data only.",
+      "deliverables": [
+        "Sample inbox triage board",
+        "Task-priority matrix",
+        "Follow-up tracker",
+        "Short handover note"
+      ],
+      "tools": [
+        "Google Sheets or equivalent",
+        "Email workflow mockup"
+      ],
+      "liveUrl": "",
+      "repoUrl": "",
+      "coverImage": "",
+      "gallery": [],
+      "altText": "Email and task management workflow demo",
+      "disclaimer": "Planned demo, not client work. Create and review artifacts before publishing.",
+      "metrics": [],
+      "servicesDemonstrated": [
+        "email-task-support",
+        "research-documentation",
+        "data-entry-organization"
+      ]
+    },
+    {
+      "id": "presentation-design-demo",
+      "title": "Presentation Deck: From Notes to Clear Slides",
+      "category": "creative",
+      "projectType": "demo",
+      "status": "draft",
+      "featured": false,
+      "sortOrder": 8,
+      "summary": "Planned demo transforming a fictional brief or supplied notes into a concise, well-structured presentation.",
+      "context": "Dense information is difficult to scan when slides lack hierarchy and a clear narrative.",
+      "approach": "Create a fictional brief, outline the story, design a consistent slide system, and show the before/after information structure.",
+      "deliverables": [
+        "Presentation outline",
+        "Slide deck",
+        "Typography and layout rules",
+        "Export-ready PDF"
+      ],
+      "tools": [
+        "Figma or Canva"
+      ],
+      "liveUrl": "",
+      "repoUrl": "",
+      "coverImage": "",
+      "gallery": [],
+      "altText": "Presentation design demo",
+      "disclaimer": "Planned demo, not client work. Build the deck and add screenshots before publishing.",
+      "metrics": [],
+      "servicesDemonstrated": [
+        "presentation-design",
+        "content-formatting"
+      ]
+    }
+  ]
+}

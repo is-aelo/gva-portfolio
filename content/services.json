@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "admin-support",
+      "title": "Administrative Support",
+      "intro": "Coordination and follow-through that keep day-to-day work moving.",
+      "items": [
+        {
+          "id": "email-task-support",
+          "title": "Email & Task Support",
+          "description": "Support inbox organization, task lists, follow-ups, and priority tracking based on the workflow and rules provided.",
+          "status": "active",
+          "featured": true
+        },
+        {
+          "id": "research-documentation",
+          "title": "Research & Documentation",
+          "description": "Organize information, prepare concise summaries, and keep working notes or process documents clear and useful.",
+          "status": "active",
+          "featured": false
+        },
+        {
+          "id": "data-entry-organization",
+          "title": "Data Entry & File Organization",
+          "description": "Maintain structured records, organize digital files, and check information for consistency.",
+          "status": "active",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "creative-support",
+      "title": "Creative Support",
+      "intro": "Visual production support for presentations and everyday digital communication.",
+      "items": [
+        {
+          "id": "presentation-design",
+          "title": "Presentation Design",
+          "description": "Create or refine clear, well-structured slides for proposals, reports, internal updates, or educational content.",
+          "status": "active",
+          "featured": true
+        },
+        {
+          "id": "graphic-design",
+          "title": "Graphic Design Support",
+          "description": "Prepare social graphics, flyers, posters, cover art, and digital assets using supplied direction and brand references.",
+          "status": "active",
+          "featured": true
+        },
+        {
+          "id": "content-formatting",
+          "title": "Content Formatting",
+          "description": "Format digital content and documents so information is easier to scan, understand, and share.",
+          "status": "active",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "id": "digital-support",
+      "title": "Digital & Website Support",
+      "intro": "Website design, development, maintenance, and practical digital support—from visual design to implementation.",
+      "items": [
+        {
+          "id": "website-design-redesign",
+          "title": "Website Design & Redesign",
+          "description": "Design clean, intuitive website layouts and improve existing interfaces around user needs and business goals.",
+          "status": "active",
+          "featured": true
+        },
+        {
+          "id": "website-development",
+          "title": "Website Development",
+          "description": "Build responsive websites using suitable platforms, frameworks, and tools, from front-end implementation to CMS-based builds.",
+          "status": "active",
+          "featured": true
+        },
+        {
+          "id": "website-content-updates",
+          "title": "Website Content Updates",
+          "description": "Update pages, images, and content using supported CMS platforms and website builders.",
+          "status": "active",
+          "featured": false
+        },
+        {
+          "id": "website-qa-troubleshooting",
+          "title": "Website QA & Troubleshooting",
+          "description": "Check layouts, links, responsiveness, and user flows; document issues and help resolve frontend problems.",
+          "status": "active",
+          "featured": false
+        },
+        {
+          "id": "cms-digital-tool-support",
+          "title": "CMS & Digital Tool Support",
+          "description": "Assist with website content management and everyday digital workflows.",
+          "status": "active",
+          "featured": false
+        }
+      ]
+    }
+  ],
+  "note": "Service capability is not a claim of prior paid experience in every task. Confirm tools, access, scope, and turnaround before engagement."
+}

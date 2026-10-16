@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "web-dev-intern-pcu",
+      "title": "Web Developer Intern",
+      "organization": "Philippine Christian University – Cavite",
+      "location": "Cavite, Philippines",
+      "startDate": "2025-03",
+      "endDate": "2025-06",
+      "type": "Internship",
+      "status": "published",
+      "summary": "Contributed to a university event management system during an internship.",
+      "bullets": [
+        "Worked with Laravel, Filament PHP, and MySQL.",
+        "Worked on event-management workflows involving eligibility validation, QR-based check-ins, and role-based access control."
+      ],
+      "tools": [
+        "Laravel",
+        "Filament PHP",
+        "MySQL"
+      ],
+      "publicNote": "Keep in draft until project description and permission to publish are reviewed."
+    },
+    {
+      "id": "freelance-graphic-designer",
+      "title": "Freelance Graphic Designer",
+      "organization": "Independent / freelance",
+      "location": "Remote",
+      "startDate": "2020",
+      "endDate": "2021",
+      "type": "Freelance",
+      "status": "published",
+      "summary": "Created visual assets for digital and print-oriented projects.",
+      "bullets": [
+        "Produced social media graphics, podcast covers, flyers, magazine covers, infographics, and vector/vexel artwork.",
+        "Worked across visual styles and formats based on each brief."
+      ],
+      "tools": [
+        "Photoshop",
+        "Illustrator",
+        "Canva"
+      ],
+      "publicNote": "Publish only with selected artwork you have permission to display."
+    }
+  ]
+}

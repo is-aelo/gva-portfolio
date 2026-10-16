@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "cvsu-bsit",
+      "qualification": "Bachelor of Science in Information Technology",
+      "institution": "Cavite State University",
+      "startYear": "2021",
+      "endYear": "2025",
+      "status": "published",
+      "notes": ""
+    },
+    {
+      "id": "pcu-shs-ict",
+      "qualification": "Senior High School, TVL-ICT Computer Programming",
+      "institution": "Philippine Christian University – Cavite",
+      "startYear": "2018",
+      "endYear": "2020",
+      "status": "published",
+      "notes": ""
+    }
+  ]
+}

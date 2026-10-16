@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "profile": {
+    "name": "Eloisa Jane Talingting",
+    "shortName": "Eloi",
+    "role": "General Virtual Assistant",
+    "headline": "Reliable support for the work behind the work.",
+    "subheadline": "Organized, creative, and tech-aware support for busy teams and growing businesses.",
+    "summary": "I help keep digital work moving through organized task support, clear communication, creative production, and practical website assistance. My background in Information Technology helps me understand tools and workflows, while my design experience lets me support visual and digital content too.",
+    "location": "Bogo City, Cebu, Philippines",
+    "workMode": "Remote",
+    "availability": "Open to remote opportunities",
+    "email": "",
+    "contactUrl": "",
+    "resumeUrl": "",
+    "portfolioUrl": "https://eloisatalingting-portfolio.vercel.app/"
+  },
+  "navigation": [
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Support",
+      "href": "#services"
+    },
+    {
+      "label": "Selected Work",
+      "href": "#work"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "about": {
+    "eyebrow": "A little about how I work",
+    "title": "A practical mix of organization, creativity, and technical awareness.",
+    "paragraphs": [
+      "I have a Bachelor of Science in Information Technology and experience across web development, graphic design, and digital projects. That mix helps me approach tasks with attention to detail and an understanding of the tools behind the work.",
+      "I’m building my career in remote support and am open to general VA work, creative support, and website-related tasks. I value clear expectations, useful documentation, consistent follow-through, and asking questions early when something is unclear."
+    ]
+  },
+  "contact": {
+    "eyebrow": "Have a task or project in mind?",
+    "title": "Let’s make the next steps clearer.",
+    "body": "For remote opportunities, freelance support, or project-based work, reach out by email or through the contact link below.",
+    "ctaLabel": "Contact me",
+    "ctaUrl": ""
+  },
+  "socialLinks": [
+    {
+      "label": "Portfolio",
+      "url": "https://eloisatalingting-portfolio.vercel.app/"
+    },
+    {
+      "label": "LinkedIn",
+      "url": ""
+    },
+    {
+      "label": "Facebook",
+      "url": ""
+    }
+  ],
+  "seo": {
+    "title": "Eloisa Jane Talingting | General Virtual Assistant",
+    "description": "Remote general VA support with a background in Information Technology, creative production, and website workflows.",
+    "ogImage": ""
+  }
+}
