@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "eyebrow": "WHY WORK WITH ME",
+  "title": "More than task support.",
+  "intro": "",
+  "items": [
+    {
+      "id": "technical-adaptability",
+      "title": "Technical Adaptability",
+      "subtitle": "Adapting to different technologies and digital tools.",
+      "description": "I can learn unfamiliar platforms, navigate digital systems, and work across websites, content management systems, and other business tools.",
+      "icon": "monitor-cog"
+    },
+    {
+      "id": "ai-ready-workflows",
+      "title": "AI-Ready Workflows",
+      "subtitle": "Using AI with purpose, not just prompting.",
+      "description": "I use AI to support research, develop ideas, assist with visual creation, and work through digital tasks—with clear instructions and human review.",
+      "icon": "sparkles"
+    },
+    {
+      "id": "process-improvement",
+      "title": "Process Improvement",
+      "subtitle": "Always looking for a better way to get things done.",
+      "description": "I look for practical ways to improve existing processes, simplify workflows, and make systems easier to use and manage.",
+      "icon": "workflow"
+    },
+    {
+      "id": "clear-communication",
+      "title": "Clear Communication",
+      "subtitle": "Keeping you informed without having to ask for updates.",
+      "description": "I communicate progress, share relevant updates, and ask questions when something is unclear—so you always know where things stand and what to expect next.",
+      "icon": "messages-square"
+    }
+  ]
+}

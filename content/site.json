@@ -17,16 +17,16 @@
   },
   "navigation": [
     {
-      "label": "About",
-      "href": "#about"
-    },
-    {
       "label": "Support",
       "href": "#services"
     },
     {
       "label": "Selected Work",
       "href": "#work"
+    },
+    {
+      "label": "About",
+      "href": "#about"
     },
     {
       "label": "Experience",
@@ -38,7 +38,7 @@
     }
   ],
   "about": {
-    "eyebrow": "A little about how I work",
+    "eyebrow": "A little about me",
     "title": "A practical mix of organization, creativity, and technical awareness.",
     "paragraphs": [
       "I’m Eloisa Jane, a BSIT graduate with a background in web development, graphic design, and digital projects. I combine technical knowledge, creativity, and organization to help businesses keep tasks organized, present their brand professionally, and maintain a smoother digital workflow.",
