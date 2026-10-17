@@ -169,10 +169,10 @@
     {
       "id": "creative-design-collection",
       "title": "Selected Graphic Design Work",
-      "category": "creative",
+      "category": "graphic-design",
       "projectType": "freelance",
-      "status": "draft",
-      "featured": false,
+      "status": "published",
+      "featured": true,
       "sortOrder": 6,
       "summary": "A curated selection of graphic design work across social content, covers, flyers, infographics, and illustration.",
       "context": "Different communication needs call for clear hierarchy, visual consistency, and format-aware design.",
@@ -190,7 +190,24 @@
       ],
       "liveUrl": "",
       "repoUrl": "",
-      "coverImage": "",
+      "coverImage": "https://res.cloudinary.com/vax33tiy/image/upload/v1792232910/design-ai_infographic.jpg",
+      "beforeAfter": [
+        {
+          "title": "AI infographic comparison",
+          "before": "https://res.cloudinary.com/vax33tiy/image/upload/v1792232910/design-ai_infographic.jpg",
+          "after": "https://res.cloudinary.com/vax33tiy/image/upload/v1792232474/mockup-ai_infographic.webp"
+        },
+        {
+          "title": "Ramen poster comparison",
+          "before": "https://res.cloudinary.com/vax33tiy/image/upload/v1792232474/design-ramen.webp",
+          "after": "https://res.cloudinary.com/vax33tiy/image/upload/v1792232474/mockup-ramen.webp"
+        },
+        {
+          "title": "Pacquiao poster comparison",
+          "before": "https://res.cloudinary.com/vax33tiy/image/upload/v1792232474/design-pacquiao.webp",
+          "after": "https://res.cloudinary.com/vax33tiy/image/upload/v1792232473/mockup-pacquiao.webp"
+        }
+      ],
       "gallery": [],
       "altText": "Selected graphic design work",
       "disclaimer": "Add only work you have permission to display; identify personal or speculative pieces accurately.",
