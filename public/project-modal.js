@@ -4,11 +4,6 @@ class ProjectModal extends HTMLElement {
     this.innerHTML = '<dialog class="project-dialog" aria-labelledby="project-dialog-title"></dialog>';
     this.dialog = this.querySelector('dialog');
     this.dialog.addEventListener('click', event => {
-      const posterHalf = event.target.closest('.poster-half-button');
-      if (posterHalf) {
-        this.openPosterImage(posterHalf.dataset.posterImage, posterHalf.dataset.posterLabel);
-        return;
-      }
       if (event.target === this.dialog || event.target.closest('.project-dialog-close')) {
         this.close();
       }
@@ -26,13 +21,48 @@ class ProjectModal extends HTMLElement {
     return galleryImages.length ? galleryImages : (project.coverImage || project.imageUrl ? [project.coverImage || project.imageUrl] : []);
   }
 
-  openPosterImage(image, label) {
+  open(project) {
+    if (!project || !this.dialog) return;
+    const esc = value => this.escape(value);
+    const galleryImages = this.getGallery(project);
+    const currentImage = galleryImages[0] || project.coverImage || project.imageUrl || '';
+    const mediaHtml = currentImage ? `<div class="project-dialog-media"><img src="${esc(currentImage)}" alt="${esc(project.altText || project.title)}" loading="lazy"></div>` : '';
+    this.dialog.innerHTML = `<div class="project-dialog-inner"><h2 id="project-dialog-title">${esc(project.title)}</h2>${mediaHtml}<p class="project-dialog-summary">${esc(project.summary || '')}</p>${project.context ? `<section><h3>Context</h3><p>${esc(project.context)}</p></section>` : ''}${project.approach ? `<section><h3>Approach</h3><p>${esc(project.approach)}</p></section>` : ''}${project.deliverables?.length ? `<section><h3>Deliverables</h3><ul>${project.deliverables.map(item => `<li>${esc(item)}</li>`).join('')}</ul></section>` : ''}${project.tools?.length ? `<section><h3>Tools</h3><div class="project-dialog-tools">${project.tools.map(item => `<span>${esc(item)}</span>`).join('')}</div></section>` : ''}${project.disclaimer ? `<p class="project-dialog-note">${esc(project.disclaimer)}</p>` : ''}<div class="project-dialog-actions">${project.liveUrl ? `<a class="project-visit" href="${esc(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Visit live</a>` : ''}<button class="project-dialog-close button-secondary" type="button">Close</button></div></div>`;
+    this.dialog.showModal();
+    this.dialog.querySelector('.project-dialog-close')?.focus();
+  }
+
+  close() {
+    if (this.dialog?.open) this.dialog.close();
+  }
+}
+
+class PosterModal extends HTMLElement {
+  connectedCallback() {
+    if (this.dialog) return;
+    this.innerHTML = '<dialog class="poster-dialog" aria-label="Poster preview"></dialog>';
+    this.dialog = this.querySelector('dialog');
+    this.dialog.addEventListener('click', event => {
+      if (event.target === this.dialog || event.target.closest('.poster-dialog-close')) {
+        this.close();
+      }
+    });
+  }
+
+  escape(value) {
+    return String(value ?? '').replace(/[&<>"']/g, char => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[char]);
+  }
+
+  open(image, label) {
     if (!image || !this.dialog) return;
     const esc = value => this.escape(value);
-    this.dialog.innerHTML = `<div class="project-dialog-inner project-dialog-inner--poster-single"><div class="project-dialog-single-toolbar"><button class="project-dialog-zoom" type="button" data-zoom="out" aria-label="Zoom out">−</button><button class="project-dialog-zoom project-dialog-zoom--reset" type="button" data-zoom="reset" aria-label="Reset zoom">100%</button><button class="project-dialog-zoom" type="button" data-zoom="in" aria-label="Zoom in">＋</button></div><div class="project-dialog-single-frame"><img class="project-dialog-single-image" src="${esc(image)}" alt="${esc(label || 'Poster image')}" loading="eager"></div><div class="project-dialog-actions project-dialog-actions--poster"><button class="project-dialog-close button-secondary" type="button">Close</button></div></div>`;
+    this.dialog.innerHTML = `<div class="poster-dialog-inner"><div class="poster-dialog-toolbar"><button class="project-dialog-zoom" type="button" data-zoom="out" aria-label="Zoom out">−</button><button class="project-dialog-zoom project-dialog-zoom--reset" type="button" data-zoom="reset" aria-label="Reset zoom">100%</button><button class="project-dialog-zoom" type="button" data-zoom="in" aria-label="Zoom in">＋</button></div><div class="poster-dialog-frame"><img class="poster-dialog-image" src="${esc(image)}" alt="${esc(label || 'Poster image')}" loading="eager"></div><div class="project-dialog-actions project-dialog-actions--poster"><button class="poster-dialog-close button-secondary" type="button">Close</button></div></div>`;
     this.dialog.showModal();
-    const imageEl = this.dialog.querySelector('.project-dialog-single-image');
-    const frameEl = this.dialog.querySelector('.project-dialog-single-frame');
+
+    const imageEl = this.dialog.querySelector('.poster-dialog-image');
+    const frameEl = this.dialog.querySelector('.poster-dialog-frame');
     const resetButton = this.dialog.querySelector('[data-zoom="reset"]');
     let zoom = 1;
     let dragStartX = 0;
@@ -107,37 +137,18 @@ class ProjectModal extends HTMLElement {
 
     imageEl.style.cursor = 'grab';
     imageEl.style.transition = 'transform .18s ease';
+    imageEl.style.touchAction = 'none';
+    imageEl.style.userSelect = 'none';
+    frameEl.style.touchAction = 'none';
     imageEl.addEventListener('pointerdown', onPointerDown);
     imageEl.addEventListener('pointermove', onPointerMove);
     imageEl.addEventListener('pointerup', onPointerUp);
+    imageEl.addEventListener('pointercancel', onPointerUp);
     imageEl.addEventListener('pointerleave', onPointerUp);
     frameEl.addEventListener('pointerup', onPointerUp);
+    frameEl.addEventListener('pointercancel', onPointerUp);
     applyZoom(1);
-    this.dialog.querySelector('.project-dialog-close')?.focus();
-  }
-
-  open(project) {
-    if (!project || !this.dialog) return;
-    const esc = value => this.escape(value);
-    const isPosterView = project.modalMode === 'poster';
-    if (isPosterView) {
-      const pairs = Array.isArray(project.beforeAfter) && project.beforeAfter.length ? project.beforeAfter : [{ before: project.coverImage || project.imageUrl || '', after: project.coverImage || project.imageUrl || '' }];
-      const posterMarkup = pairs.map(item => {
-        const before = item.before || '';
-        const after = item.after || '';
-        return `<div class="project-dialog-poster-pair">${before ? `<button class="project-dialog-poster-half poster-half-button" type="button" data-poster-image="${esc(before)}" data-poster-label="${esc(item.title || project.title || 'Design')}"><span>Design</span><img src="${esc(before)}" alt="${esc(item.title || project.title || 'Design')}" loading="lazy"></button>` : ''}${after ? `<button class="project-dialog-poster-half poster-half-button" type="button" data-poster-image="${esc(after)}" data-poster-label="${esc(item.title || project.title || 'Mockup')}"><span>On mockup</span><img src="${esc(after)}" alt="${esc(item.title || project.title || 'Mockup')}" loading="lazy"></button>` : ''}</div>`;
-      }).join('');
-      this.dialog.innerHTML = `<div class="project-dialog-inner project-dialog-inner--poster">${posterMarkup}<div class="project-dialog-actions project-dialog-actions--poster"><button class="project-dialog-close button-secondary" type="button">Close</button></div></div>`;
-      this.dialog.showModal();
-      this.dialog.querySelector('.project-dialog-close')?.focus();
-      return;
-    }
-    const galleryImages = this.getGallery(project);
-    const currentImage = galleryImages[0] || project.coverImage || project.imageUrl || '';
-    const mediaHtml = currentImage ? `<div class="project-dialog-media"><img src="${esc(currentImage)}" alt="${esc(project.altText || project.title)}" loading="lazy"></div>` : '';
-    this.dialog.innerHTML = `<div class="project-dialog-inner"><h2 id="project-dialog-title">${esc(project.title)}</h2>${mediaHtml}<p class="project-dialog-summary">${esc(project.summary || '')}</p>${project.context ? `<section><h3>Context</h3><p>${esc(project.context)}</p></section>` : ''}${project.approach ? `<section><h3>Approach</h3><p>${esc(project.approach)}</p></section>` : ''}${project.deliverables?.length ? `<section><h3>Deliverables</h3><ul>${project.deliverables.map(item => `<li>${esc(item)}</li>`).join('')}</ul></section>` : ''}${project.tools?.length ? `<section><h3>Tools</h3><div class="project-dialog-tools">${project.tools.map(item => `<span>${esc(item)}</span>`).join('')}</div></section>` : ''}${project.disclaimer ? `<p class="project-dialog-note">${esc(project.disclaimer)}</p>` : ''}<div class="project-dialog-actions">${project.liveUrl ? `<a class="project-visit" href="${esc(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Visit live</a>` : ''}<button class="project-dialog-close button-secondary" type="button">Close</button></div></div>`;
-    this.dialog.showModal();
-    this.dialog.querySelector('.project-dialog-close')?.focus();
+    this.dialog.querySelector('.poster-dialog-close')?.focus();
   }
 
   close() {
@@ -146,3 +157,4 @@ class ProjectModal extends HTMLElement {
 }
 
 customElements.define('project-modal', ProjectModal);
+customElements.define('poster-modal', PosterModal);
