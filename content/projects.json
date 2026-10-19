@@ -218,13 +218,87 @@
       ]
     },
     {
+      "id": "color-grading-correction",
+      "title": "Color Grading & Correction",
+      "category": "graphic-design",
+      "projectType": "freelance",
+      "status": "published",
+      "featured": true,
+      "sortOrder": 7,
+      "summary": "A collection of photo-editing studies focused on color grading, exposure correction, tonal balance, and portrait refinement.",
+      "context": "Each study explores how thoughtful editing can improve mood, clarity, and visual impact while preserving the natural character of the original scene where appropriate.",
+      "approach": "Use controlled adjustments to shape contrast, exposure, and color while keeping the edits realistic and cohesive with the source image.",
+      "deliverables": [
+        "Color grading studies",
+        "Portrait refinement edits",
+        "Exposure and tonal balance adjustments"
+      ],
+      "tools": [
+        "Adobe Lightroom",
+        "Adobe Photoshop",
+        "Color correction"
+      ],
+      "liveUrl": "",
+      "repoUrl": "",
+      "coverImage": "https://res.cloudinary.com/vax33tiy/image/upload/v1792386276/KianMousazadeh_1.jpg",
+      "beforeAfter": [
+        {
+          "title": "Neo-Noir: A Study in Contrast",
+          "description": "Transformed a portrait with cool shadows, controlled highlights, and cinematic contrast to create a moody neo-noir aesthetic.",
+          "before": "https://res.cloudinary.com/vax33tiy/image/upload/v1792386276/KianMousazadeh_1.jpg",
+          "after": "https://res.cloudinary.com/vax33tiy/image/upload/v1792386276/KianMousazadeh.jpg",
+          "credit": "@KianMousazadeh",
+          "source": "https://www.signatureedits.com/"
+        },
+        {
+          "title": "The City After Dark",
+          "description": "Enhanced the glow of city lights and neon colors while balancing exposure and contrast to bring out the atmosphere of an urban night scene.",
+          "before": "https://res.cloudinary.com/vax33tiy/image/upload/v1792386375/03-10-2018_osaka_071_1.jpg",
+          "after": "https://res.cloudinary.com/vax33tiy/image/upload/v1792386376/03-10-2018_osaka_071.jpg",
+          "credit": "jsitko",
+          "source": "https://www.reddit.com/r/EditMyRaw/"
+        },
+        {
+          "title": "Bringing the Details into Focus",
+          "description": "Improved exposure, visibility, and tonal balance to reveal more detail in the motorcycle while preserving the original scene.",
+          "before": "https://res.cloudinary.com/vax33tiy/image/upload/v1792386451/Motorcyclist_On_a_Cool_Kawasaki_ZX-6R_-_Modified_1.jpg",
+          "after": "https://res.cloudinary.com/vax33tiy/image/upload/v1792386450/Motorcyclist_On_a_Cool_Kawasaki_ZX-6R_-_Modified.jpg",
+          "credit": "Current_Attitude_724",
+          "source": "https://www.reddit.com/r/EditMyRaw/comments/1jg78qh/motorcyclist_on_a_cool_kawasaki_zx6r/"
+        },
+        {
+          "title": "Portrait Refinement: Light & Tone",
+          "description": "Refined the portrait's lighting, tonal balance, and overall color to create a cleaner, more polished result while retaining a natural appearance.",
+          "before": "https://res.cloudinary.com/vax33tiy/image/upload/v1792389417/paul_marney_original.jpg",
+          "after": "https://res.cloudinary.com/vax33tiy/image/upload/v1792389418/paul_marney_1_of_1.jpg",
+          "credit": "Paul Marney",
+          "source": "https://www.facebook.com/share/19AQja2WCj/"
+        },
+        {
+          "title": "Vibrance in Motion",
+          "description": "Brought more life to the scene with refined color, vibrance, and tonal adjustments while keeping the subjects and setting natural.",
+          "before": "https://res.cloudinary.com/vax33tiy/image/upload/v1792389786/DSC03299.jpg",
+          "after": "https://res.cloudinary.com/vax33tiy/image/upload/v1792389785/Corgi-Playing.jpg",
+          "credit": "darthnut",
+          "source": "https://www.reddit.com/r/EditMyRaw/comments/1ob1gub/a_corgi_and_some_ducks/"
+        }
+      ],
+      "gallery": [],
+      "altText": "Color grading and correction photo-editing studies",
+      "disclaimer": "Photo-editing studies presented as portfolio work; no claim of client results or professional retouching claims beyond the displayed examples.",
+      "metrics": [],
+      "servicesDemonstrated": [
+        "graphic-design"
+      ]
+    },
+    {
       "id": "email-task-management-demo",
       "title": "Email & Task Management Workflow",
       "category": "admin-support",
       "projectType": "demo",
       "status": "draft",
       "featured": false,
-      "sortOrder": 7,
+      "sortOrder": 8,
       "summary": "Planned demonstration project showing how an inbox and task list can be triaged using a clear priority system.",
       "context": "When multiple requests arrive at once, teams need a repeatable way to distinguish urgent work, waiting items, and routine follow-ups.",
       "approach": "Build a fictional sample inbox, define a priority matrix, organize tasks by urgency and impact, and document the rules used. Use synthetic data only.",

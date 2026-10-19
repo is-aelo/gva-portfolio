@@ -27,7 +27,20 @@ class ProjectModal extends HTMLElement {
     const galleryImages = this.getGallery(project);
     const currentImage = galleryImages[0] || project.coverImage || project.imageUrl || '';
     const mediaHtml = currentImage ? `<div class="project-dialog-media"><img src="${esc(currentImage)}" alt="${esc(project.altText || project.title)}" loading="lazy"></div>` : '';
-    this.dialog.innerHTML = `<div class="project-dialog-inner"><h2 id="project-dialog-title">${esc(project.title)}</h2>${mediaHtml}<p class="project-dialog-summary">${esc(project.summary || '')}</p>${project.context ? `<section><h3>Context</h3><p>${esc(project.context)}</p></section>` : ''}${project.approach ? `<section><h3>Approach</h3><p>${esc(project.approach)}</p></section>` : ''}${project.deliverables?.length ? `<section><h3>Deliverables</h3><ul>${project.deliverables.map(item => `<li>${esc(item)}</li>`).join('')}</ul></section>` : ''}${project.tools?.length ? `<section><h3>Tools</h3><div class="project-dialog-tools">${project.tools.map(item => `<span>${esc(item)}</span>`).join('')}</div></section>` : ''}${project.disclaimer ? `<p class="project-dialog-note">${esc(project.disclaimer)}</p>` : ''}<div class="project-dialog-actions">${project.liveUrl ? `<a class="project-visit" href="${esc(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Visit live</a>` : ''}<button class="project-dialog-close button-secondary" type="button">Close</button></div></div>`;
+    const beforeAfterHtml = Array.isArray(project.beforeAfter) && project.beforeAfter.length ? `<section><h3>Studies</h3><div class="project-dialog-beforeafter-list">${project.beforeAfter.map(item => `
+      <article class="project-dialog-beforeafter-item">
+        <div class="project-dialog-beforeafter-media">
+          <div class="project-dialog-beforeafter-half"><span>Before</span><img src="${esc(item.before || '')}" alt="${esc((item.title || project.title || 'Study') + ' before')}" loading="lazy"></div>
+          <div class="project-dialog-beforeafter-half"><span>After</span><img src="${esc(item.after || '')}" alt="${esc((item.title || project.title || 'Study') + ' after')}" loading="lazy"></div>
+        </div>
+        <div class="project-dialog-beforeafter-copy">
+          <h4>${esc(item.title || project.title || 'Study')}</h4>
+          ${item.description ? `<p>${esc(item.description)}</p>` : ''}
+          ${(item.credit || item.source) ? `<p class="project-dialog-meta">${item.credit ? `Photo credit: ${esc(item.credit)}` : ''}${item.credit && item.source ? ' · ' : ''}${item.source ? `<a href="${esc(item.source)}" target="_blank" rel="noopener noreferrer">Source</a>` : ''}</p>` : ''}
+        </div>
+      </article>
+    `).join('')}</div></section>` : '';
+    this.dialog.innerHTML = `<div class="project-dialog-inner"><h2 id="project-dialog-title">${esc(project.title)}</h2>${mediaHtml}<p class="project-dialog-summary">${esc(project.summary || '')}</p>${project.context ? `<section><h3>Context</h3><p>${esc(project.context)}</p></section>` : ''}${project.approach ? `<section><h3>Approach</h3><p>${esc(project.approach)}</p></section>` : ''}${beforeAfterHtml}${project.deliverables?.length ? `<section><h3>Deliverables</h3><ul>${project.deliverables.map(item => `<li>${esc(item)}</li>`).join('')}</ul></section>` : ''}${project.tools?.length ? `<section><h3>Tools</h3><div class="project-dialog-tools">${project.tools.map(item => `<span>${esc(item)}</span>`).join('')}</div></section>` : ''}${project.disclaimer ? `<p class="project-dialog-note">${esc(project.disclaimer)}</p>` : ''}<div class="project-dialog-actions">${project.liveUrl ? `<a class="project-visit" href="${esc(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Visit live</a>` : ''}<button class="project-dialog-close button-secondary" type="button">Close</button></div></div>`;
     this.dialog.showModal();
     this.dialog.querySelector('.project-dialog-close')?.focus();
   }
