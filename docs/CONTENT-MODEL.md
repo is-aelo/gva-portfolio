@@ -7,7 +7,7 @@
 | `projects.json` | Work samples and demos | `items[]` |
 | `experience.json` | Work and internship history | `items[]` |
 | `education.json` | Education | `items[]` |
-| `skills.json` | Skill/tool groupings | `groups[].items[]` |
+| `skills.json` | Separate skill and tool groupings | `skills.groups[].items[]`, `tools.groups[].items[]` |
 | `process.json` | Work steps and principles | `steps[]` |
 
 ## Project fields

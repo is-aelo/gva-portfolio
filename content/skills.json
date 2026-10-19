@@ -1,68 +1,74 @@
 {
   "schemaVersion": 1,
-  "groups": [
-    {
-      "id": "admin",
-      "title": "Administrative & Workflow Support",
-      "items": [
-        "Email and task organization (demo workflow in progress)",
-        "Research and information organization",
-        "Documentation and handover notes",
-        "Task prioritization based on provided rules"
-      ]
-    },
-    {
-      "id": "creative",
-      "title": "Creative Production",
-      "items": [
-        "Graphic design",
-        "Presentation and information design",
-        "UI/UX design thinking",
-        "Color correction and grading",
-        "Basic digital illustration"
-      ]
-    },
-    {
-      "id": "digital",
-      "title": "Web & Digital Tools",
-      "items": [
-        "WordPress",
-        "Elementor",
-        "Framer",
-        "Figma",
-        "Canva",
-        "Photoshop",
-        "Illustrator",
-        "Lightroom",
-        "Shopify",
-        "Sanity CMS"
-      ]
-    },
-    {
-      "id": "technical",
-      "title": "Technical Awareness",
-      "items": [
-        "HTML, CSS, JavaScript",
-        "React and Next.js",
-        "TypeScript",
-        "PHP and Laravel",
-        "Django",
-        "API integrations",
-        "MySQL and PostgreSQL",
-        "Supabase",
-        "Vercel and Render"
-      ]
-    },
-    {
-      "id": "ai",
-      "title": "AI-Assisted Tools",
-      "items": [
-        "ChatGPT",
-        "Claude",
-        "Gemini",
-        "Codex"
-      ]
-    }
-  ],
+  "skills": {
+    "groups": [
+      {
+        "id": "admin",
+        "title": "Administrative & Workflow Support",
+        "items": [
+          "Email and task organization (demo workflow in progress)",
+          "Research and information organization",
+          "Documentation and handover notes",
+          "Task prioritization based on provided rules"
+        ]
+      },
+      {
+        "id": "creative",
+        "title": "Creative Production",
+        "items": [
+          "Graphic design",
+          "Presentation and information design",
+          "UI/UX design thinking",
+          "Color correction and grading",
+          "Basic digital illustration"
+        ]
+      },
+      {
+        "id": "technical",
+        "title": "Technical Awareness",
+        "items": [
+          "HTML, CSS, JavaScript",
+          "React and Next.js",
+          "TypeScript",
+          "PHP and Laravel",
+          "Django",
+          "API integrations",
+          "MySQL and PostgreSQL",
+          "Supabase",
+          "Vercel and Render"
+        ]
+      }
+    ]
+  },
+  "tools": {
+    "groups": [
+      {
+        "id": "digital",
+        "title": "Web & Digital Tools",
+        "items": [
+          "WordPress",
+          "Elementor",
+          "Framer",
+          "Figma",
+          "Canva",
+          "Photoshop",
+          "Illustrator",
+          "Lightroom",
+          "Shopify",
+          "Sanity CMS"
+        ]
+      },
+      {
+        "id": "ai",
+        "title": "AI-Assisted Tools",
+        "items": [
+          "ChatGPT",
+          "Claude",
+          "Gemini",
+          "Codex"
+        ]
+      }
+    ]
+  },
   "disclaimer": "This is a broad inventory, not a claim of equal proficiency across every tool. Keep only skills you can comfortably demonstrate."
 }
